@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Your Name</title>
+    <meta name="description" content="Personal website: research, publications, and experience." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- Top nav -->
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <div class="brand">
+          <a href="#home">Your Name</a>
+        </div>
+        <nav class="nav">
+          <a href="#home" class="active">Home</a>
+          <a href="#publications">Publications</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container" id="home">
+      <!-- Hero card -->
+      <section class="card hero">
+        <div class="hero-left">
+          <h1>Your Name</h1>
+          <p class="lead">
+            I work on <strong>[your areas]</strong> — e.g., neuromorphic computing, hardware–software co-design,
+            and efficient ML systems. I’m interested in building practical, energy-efficient AI that can run on-device.
+          </p>
+
+          <div class="links">
+            <a class="link" href="mailto:you@email.com">you@email.com</a>
+            <a class="link" href="https://scholar.google.com/" target="_blank" rel="noreferrer">Google Scholar</a>
+            <a class="link" href="https://github.com/yourhandle" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="link" href="https://www.linkedin.com/in/yourhandle/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a class="link" href="https://orcid.org/" target="_blank" rel="noreferrer">ORCID</a>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <img class="avatar" src="assets/avatar.jpg" alt="Portrait" />
+        </div>
+      </section>
+
+      <!-- Education / Experience -->
+      <section class="grid-2">
+        <div class="card">
+          <h2>Education</h2>
+
+          <div class="item">
+            <div class="item-title">Your University</div>
+            <div class="item-sub">M.S. in Something</div>
+            <div class="item-meta">2023 – 2025</div>
+          </div>
+
+          <div class="item">
+            <div class="item-title">Your University</div>
+            <div class="item-sub">B.S. in Something</div>
+            <div class="item-meta">2019 – 2023</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Experience</h2>
+
+          <div class="item">
+            <div class="item-title">Company Name</div>
+            <div class="item-sub">Role Title</div>
+            <div class="item-meta">2025 – present</div>
+          </div>
+
+          <div class="item">
+            <div class="item-title">Company Name</div>
+            <div class="item-sub">Role Title</div>
+            <div class="item-meta">2023 – 2025</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Selected publications -->
+      <section class="card" id="publications">
+        <div class="pub-header">
+          <h2>Selected Publications</h2>
+          <a class="viewall" href="#publications">view all »</a>
+        </div>
+
+        <!-- Publication 1 -->
+        <article class="pub">
+          <img class="pub-thumb" src="assets/pub1.png" alt="Publication figure" />
+
+          <div class="pub-body">
+            <div class="pub-title">
+              Paper Title: A Short, Specific Title That Reads Well
+            </div>
+
+            <div class="badges">
+              <span class="badge badge-red">NeurIPS 2025</span>
+              <span class="badge badge-red">Workshop</span>
+              <span class="badge badge-blue">arXiv</span>
+              <span class="badge badge-blue">Poster</span>
+            </div>
+
+            <div class="pub-authors">
+              Your Name, Coauthor A, Coauthor B
+            </div>
+
+            <p class="pub-abstract">
+              2–4 sentences: what you did, what you found, and why it matters. Keep it readable.
+              Mention key results (accuracy, efficiency, benchmark, etc.) without going too deep.
+            </p>
+
+            <div class="pub-links">
+              <a href="https://github.com/yourhandle/yourrepo" target="_blank" rel="noreferrer">Code</a>
+              <a href="https://arxiv.org/" target="_blank" rel="noreferrer">Paper</a>
+              <a href="#" target="_blank" rel="noreferrer">Poster</a>
+            </div>
+          </div>
+        </article>
+
+        <div class="divider"></div>
+
+        <!-- Publication 2 -->
+        <article class="pub">
+          <img class="pub-thumb" src="assets/pub2.png" alt="Publication figure" />
+
+          <div class="pub-body">
+            <div class="pub-title">
+              Another Paper Title: Something Clear and Informative
+            </div>
+
+            <div class="badges">
+              <span class="badge badge-blue">Under Review</span>
+              <span class="badge badge-blue">arXiv</span>
+            </div>
+
+            <div class="pub-authors">
+              Coauthor X, Your Name, Coauthor Y
+            </div>
+
+            <p class="pub-abstract">
+              Brief description. Highlight the main claim and the practical takeaway.
+            </p>
+
+            <div class="pub-links">
+              <a href="https://github.com/" target="_blank" rel="noreferrer">Code</a>
+              <a href="https://arxiv.org/" target="_blank" rel="noreferrer">Paper</a>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <footer class="footer">
+        <span>© <span id="year"></span> Your Name</span>
+      </footer>
+    </main>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Simple active nav highlighting (optional)
+      const links = document.querySelectorAll(".nav a");
+      links.forEach((a) => {
+        a.addEventListener("click", () => {
+          links.forEach((x) => x.classList.remove("active"));
+          a.classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>
